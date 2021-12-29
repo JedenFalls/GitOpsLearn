@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/JedenFalls/GitOpsLearn.git
     targetRevision: HEAD
-    path: main
+    path: infra
   destination:
     server: https://kubernetes.default.svc
     namespace: emojivoto
@@ -17,8 +17,7 @@ spec:
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
-    
-  automated:
-    selfHeal: true
-    prune: true
+    automated:
+      selfHeal: true
+      prune: true
     
